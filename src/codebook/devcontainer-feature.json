@@ -1,6 +1,6 @@
 {
   "id": "codebook",
-  "version": "1",
+  "version": "1.0.0",
   "name": "codebook-lsp",
   "description": "Installs the Codebook lsp",
   "options": {}
