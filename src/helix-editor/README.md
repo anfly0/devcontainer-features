@@ -7,7 +7,7 @@ Installs the Helix editor
 
 ```json
 "features": {
-    "ghcr.io/anfly0/devcontainer-features/helix-editor:25": {}
+    "ghcr.io/anfly0/devcontainer-features/helix-editor:1": {}
 }
 ```
 
