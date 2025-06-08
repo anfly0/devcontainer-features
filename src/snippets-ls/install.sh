@@ -1,0 +1,36 @@
+#!/bin/bash
+set -euo pipefail
+
+source /etc/os-release
+
+deps_install() {
+  echo "Installing dependencies..."
+  case "${ID}" in
+  debian|ubuntu)
+    apt-get update -y && apt-get -y install --no-install-recommends curl tar xz-utils ca-certificates
+    ;;
+  *)
+    echo "OS not supported.." 
+    exit 1
+  esac
+}
+
+
+
+
+snippet_install() {
+
+  VERSION=$(curl -Ls -o /dev/null -w %{url_effective} https://github.com/quantonganh/snippets-ls/releases/latest | grep -o '[^/]*$')
+  curl -L "https://github.com/quantonganh/snippets-ls/releases/download/${VERSION}/snippets-ls_Linux_x86_64.tar.gz" -o snippets-ls.tar.xz
+
+  tar -xf snippets-ls.tar.xz
+
+  mv "./snippets-ls" /usr/local/bin/
+
+  rm -rf "snippets-ls.tar.xz"
+
+  echo "Snippet-ls installed successfully."
+}
+
+deps_install
+snippet_install
