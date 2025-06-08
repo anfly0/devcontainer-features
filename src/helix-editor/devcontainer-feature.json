@@ -1,6 +1,6 @@
 {
   "id": "helix-editor",
-  "version": "25.1.1",
+  "version": "1",
   "name": "Helix Editor",
   "description": "Installs the Helix editor",
   "options": {}
