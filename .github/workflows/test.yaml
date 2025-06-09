@@ -16,6 +16,7 @@ jobs:
           - helix-editor
           - codebook
           - snippets-ls
+          - debian-utils
         baseImage:
           - debian:latest
           - ubuntu:latest
