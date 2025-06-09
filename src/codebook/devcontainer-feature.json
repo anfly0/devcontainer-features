@@ -1,9 +1,12 @@
 {
   "id": "codebook",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "name": "codebook-lsp",
   "description": "Installs the Codebook lsp",
-  "options": {}
+  "options": {},
+  "dependsOn": {
+    "ghcr.io/anfly0/devcontainer-features/debian-utils:1": {}
+  }
 }
 
 

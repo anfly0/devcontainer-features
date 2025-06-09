@@ -1,9 +1,12 @@
 {
   "id": "helix-editor",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "name": "Helix Editor",
   "description": "Installs the Helix editor",
-  "options": {}
+  "options": {},
+  "dependsOn": {
+    "ghcr.io/anfly0/devcontainer-features/debian-utils:1": {}
+  }
 }
 
 

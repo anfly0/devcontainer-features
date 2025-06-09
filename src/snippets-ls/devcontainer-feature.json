@@ -1,9 +1,12 @@
 {
   "id": "snippets-ls",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "name": "snippets-ls",
   "description": "Installs snippets-ls",
-  "options": {}
+  "options": {},
+  "dependsOn": {
+    "ghcr.io/anfly0/devcontainer-features/debian-utils:1": {}
+  }
 }
 
 

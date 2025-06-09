@@ -3,21 +3,6 @@ set -euo pipefail
 
 source /etc/os-release
 
-deps_install() {
-  echo "Installing dependencies..."
-  case "${ID}" in
-  debian|ubuntu)
-    apt-get update -y && apt-get -y install --no-install-recommends curl tar xz-utils ca-certificates
-    ;;
-  *)
-    echo "OS not supported.." 
-    exit 1
-  esac
-}
-
-
-
-
 helix_install() {
 
   VERSION=$(curl -Ls -o /dev/null -w %{url_effective} https://github.com/helix-editor/helix/releases/latest | grep -o '[^/]*$')
@@ -41,5 +26,4 @@ helix_install() {
   echo "Helix installed successfully."
 }
 
-deps_install
 helix_install
