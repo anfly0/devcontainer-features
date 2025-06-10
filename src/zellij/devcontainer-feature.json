@@ -1,0 +1,10 @@
+{
+  "id": "zellij",
+  "version": "1.0.0",
+  "name": "zellij",
+  "description": "Installs zellij",
+  "options": {},
+  "dependsOn": {
+    "ghcr.io/anfly0/devcontainer-features/debian-utils:1": {}
+  }
+}
